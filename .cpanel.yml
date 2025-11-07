@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/techldjy/public_html/
+    - export DEPLOYPATH=/home4/growtfce/netzerocmission.com/
     - /bin/cp -R * $DEPLOYPATH 
