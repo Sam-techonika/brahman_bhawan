@@ -78,7 +78,7 @@ class BookingList extends Component
         session()->flash('message', 'Booking status updated successfully!');
     }
 
-    #[Layout('components.layouts.admin')]
+    #[Layout('components.layouts.admin', ['title' => 'Booking Management'])]
     public function render()
     {
         $query = Booking::query();

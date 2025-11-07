@@ -59,7 +59,7 @@ class ContentList extends Component
         session()->flash('message', 'Contact message deleted successfully!');
     }
 
-    #[Layout('components.layouts.admin')]
+    #[Layout('components.layouts.admin', ['title' => 'Contact Messages'])]
     public function render()
     {
         $query = Contact::query();

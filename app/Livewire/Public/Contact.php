@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Public;
 
+use Livewire\Attributes\Layout;
 use Livewire\Component;
 use App\Models\Contact as ContactModel;
 
@@ -40,6 +41,7 @@ class Contact extends Component
         $this->reset(['name', 'email', 'phone', 'subject', 'message']);
     }
 
+    #[Layout('components.layouts.app', ['title' => 'Contact Us - Brahman Bhawan | Get in Touch'])]
     public function render()
     {
         return view('livewire.public.contact');

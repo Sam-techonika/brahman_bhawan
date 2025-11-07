@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Public;
 
+use Livewire\Attributes\Layout;
 use Livewire\Component;
 use App\Models\Booking;
 
@@ -67,6 +68,7 @@ class Room extends Component
         $this->showConfirmationModal = true;
     }
 
+    #[Layout('components.layouts.app', ['title' => 'Our Rooms - Brahman Bhawan | Affordable Accommodation in Karol Bagh'])]
     public function render()
     {
         return view('livewire.public.room');

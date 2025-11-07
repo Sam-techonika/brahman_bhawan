@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use Livewire\Attributes\Layout;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -41,6 +42,7 @@ class Login extends Component
         $this->addError('email', 'The provided credentials do not match our records.');
     }
 
+    #[Layout('components.layouts.app', ['title' => 'Admin Login - Brahman Bhawan'])]
     public function render()
     {
         return view('livewire.login');

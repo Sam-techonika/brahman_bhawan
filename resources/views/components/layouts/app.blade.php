@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ Brahman Bhawan| $title ?? 'Page Title' }}</title>
+    <title>{{ $title ?? 'Brahman Bhawan - 3 Star Hotel in Karol Bagh, New Delhi' }}</title>
     
     @if (file_exists(public_path('build/manifest.json')))
         @php
