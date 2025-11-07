@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ $title ?? 'Page Title' }}</title>
+    <title>{{ Brahman Bhawan| $title ?? 'Page Title' }}</title>
     
     @if (file_exists(public_path('build/manifest.json')))
         @php
@@ -28,7 +28,7 @@
 </head>
 
 <body class="antialiased bg-gray-50 text-gray-800">
-    <x-includes.header />
+    @livewire('public.header')
 
     {{ $slot }}
 

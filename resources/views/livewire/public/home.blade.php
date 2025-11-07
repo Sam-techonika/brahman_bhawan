@@ -302,7 +302,7 @@
                     </div>
 
                     <div class="mt-8">
-                        <a href="#" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-lg transition transform hover:scale-105">Book Private Double</a>
+                        <button wire:click="openBookingModal('Private Double')" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-lg transition transform hover:scale-105">Book Private Double</button>
                     </div>
                 </div>
             </div>
@@ -347,7 +347,7 @@
                     </div>
 
                     <div class="mt-8">
-                        <a href="#" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-lg transition transform hover:scale-105">Book Twin Double</a>
+                        <button wire:click="openBookingModal('Twin Double')" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-lg transition transform hover:scale-105">Book Twin Double</button>
                     </div>
                 </div>
             </div>
@@ -393,7 +393,7 @@
                     </div>
 
                     <div class="mt-8">
-                        <a href="#" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-lg transition transform hover:scale-105">Book Family Suite</a>
+                        <button wire:click="openBookingModal('Family Suite')" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-lg transition transform hover:scale-105">Book Family Suite</button>
                     </div>
                 </div>
             </div>
@@ -650,16 +650,6 @@
                         <p class="text-sm text-gray-700 leading-relaxed">"Stayed with my parents and kids. The family suite was spacious enough for all of us. Loved the pure vegetarian options. The staff was very accommodating with our requests. Clean, comfortable and affordable!"</p>
                         <div class="mt-4 text-xs text-gray-500">Posted 3 days ago</div>
                     </div>
-                </div>
-
-                <!-- View More Button -->
-                <div class="text-center mt-10">
-                    <a href="#" class="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-800 font-semibold px-8 py-3 rounded-lg border-2 border-gray-300 transition shadow-sm hover:shadow-md">
-                        <span>View All Reviews</span>
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </a>
                 </div>
             </div>
         </section>

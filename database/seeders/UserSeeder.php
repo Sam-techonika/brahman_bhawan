@@ -16,7 +16,6 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        // Create a known user for testing / admin
         User::updateOrCreate(
             ['email' => 'brahman_bhawan@mail.com'],
             [

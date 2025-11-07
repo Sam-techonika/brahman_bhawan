@@ -5,7 +5,7 @@ namespace App\Livewire\Public;
 use Livewire\Component;
 use App\Models\Booking;
 
-class Room extends Component
+class Header extends Component
 {
     public $showBookingModal = false;
     public $showConfirmationModal = false;
@@ -20,6 +20,7 @@ class Room extends Component
     public $bookingReference = '';
 
     protected $rules = [
+        'selectedRoom' => 'required|string',
         'name' => 'required|string|min:3',
         'email' => 'required|email',
         'phone' => 'required|string|min:10',
@@ -28,11 +29,10 @@ class Room extends Component
         'guests' => 'required|integer|min:1|max:10',
     ];
 
-    public function openBookingModal($roomType)
+    public function openBookingModal()
     {
-        $this->selectedRoom = $roomType;
         $this->showBookingModal = true;
-        $this->reset(['name', 'email', 'phone', 'check_in', 'check_out', 'guests', 'special_requests']);
+        $this->reset(['selectedRoom', 'name', 'email', 'phone', 'check_in', 'check_out', 'guests', 'special_requests']);
     }
 
     public function closeBookingModal()
@@ -69,6 +69,6 @@ class Room extends Component
 
     public function render()
     {
-        return view('livewire.public.room');
+        return view('livewire.public.header');
     }
 }
