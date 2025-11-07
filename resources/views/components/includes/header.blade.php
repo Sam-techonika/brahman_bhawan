@@ -6,11 +6,11 @@
             </a>
 
             <div class="hidden md:flex items-center gap-8">
-                <a href="{{ route('home') }}" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">Home</a>
-                <a href="{{ route('about') }}" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">About</a>
-                <a href="#amenities" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">Amenities</a>
-                <a href="{{ route('rooms') }}" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">Rooms</a>
-                <a href="{{ route('contact') }}" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">Contact</a>
+                <a wire:navigate href="{{ route('home') }}" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">Home</a>
+                <a wire:navigate href="{{ route('about') }}" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">About</a>
+                <a wire:navigate href="#amenities" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">Amenities</a>
+                <a wire:navigate href="{{ route('rooms') }}" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">Rooms</a>
+                <a wire:navigate href="{{ route('contact') }}" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">Contact</a>
             </div>
 
             <div class="flex items-center gap-4">
@@ -28,11 +28,11 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-200">
             <div class="flex flex-col gap-4 pt-4">
-                <a href="{{ route('home') }}" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">Home</a>
-                <a href="{{ route('about') }}" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">About</a>
-                <a href="#rooms" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">Rooms</a>
-                <a href="{{ route('contact') }}" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">Contact</a>
-                <a href="tel:+917011895100" class="flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold">
+                <a wire:navigate href="{{ route('home') }}" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">Home</a>
+                <a wire:navigate href="{{ route('about') }}" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">About</a>
+                <a wire:navigate href="#rooms" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">Rooms</a>
+                <a wire:navigate href="{{ route('contact') }}" class="text-gray-700 hover:text-orange-600 font-medium text-base transition">Contact</a>
+                <a wire:navigate href="tel:+917011895100" class="flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold">
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                     Call Now
                 </a>
