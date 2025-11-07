@@ -42,11 +42,11 @@
     <div class="p-4 border-t border-gray-700">
         <div class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-gray-700/50">
             <div class="bg-gradient-to-r from-orange-500 to-orange-600 rounded-full h-10 w-10 flex items-center justify-center">
-                <span class="text-white font-bold text-sm">A</span>
+                <span class="text-white font-bold text-sm">{{ strtoupper(substr(auth()->user()->name ?? 'A', 0, 1)) }}</span>
             </div>
             <div class="flex-1">
-                <p class="text-sm font-medium">Admin User</p>
-                <p class="text-xs text-gray-400">admin@example.com</p>
+                <p class="text-sm font-medium">{{ auth()->user()->name ?? 'Admin User' }}</p>
+                <p class="text-xs text-gray-400">{{ auth()->user()->email ?? 'admin@example.com' }}</p>
             </div>
         </div>
     </div>
