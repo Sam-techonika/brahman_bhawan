@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>{{ $title ?? 'Page Title' }}</title>
+    <title>{{ $title ?? 'Admin Panel' }} - Brahman Bhawan</title>
     
     @if (file_exists(public_path('build/manifest.json')))
         @php
@@ -20,20 +18,26 @@
     @else
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endif
-
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
+    
     @livewireStyles
 </head>
-
-<body class="antialiased bg-gray-50 text-gray-800">
-    <x-includes.header />
-
-    {{ $slot }}
-
-    <x-includes.footer />
-
+<body class="bg-gray-100" x-data="{ sidebarOpen: false }">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <x-admin.sidebar />
+        
+        <!-- Main Content Area -->
+        <div class="flex-1 flex flex-col">
+            <!-- Header -->
+            <x-admin.heder />
+            
+            <!-- Page Content -->
+            <main class="flex-1 overflow-y-auto p-6">
+                {{ $slot }}
+            </main>
+        </div>
+    </div>
+    
     @if (file_exists(public_path('build/manifest.json')))
         @php
             $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
@@ -44,8 +48,7 @@
             <script type="module" src="{{ asset('build/' . $jsFile) }}"></script>
         @endif
     @endif
-
+    
     @livewireScripts
 </body>
-
 </html>
