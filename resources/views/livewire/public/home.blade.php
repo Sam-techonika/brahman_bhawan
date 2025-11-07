@@ -19,33 +19,7 @@
                 </div>
             </div>
 
-            <!-- Booking Card -->
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 -mt-16 md:-mt-20">
-                <div class="bg-white shadow-lg rounded-lg p-6 md:p-8 max-w-5xl mx-auto border border-gray-200">
-                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 md:mb-6">Book Your Perfect Stay</h3>
-                    <form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div>
-                            <label class="text-sm font-medium text-gray-700 block mb-1">Check-in</label>
-                            <input type="date" class="block w-full border-gray-300 rounded-md shadow-sm focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-sm px-3 py-2" />
-                        </div>
-                        <div>
-                            <label class="text-sm font-medium text-gray-700 block mb-1">Check-out</label>
-                            <input type="date" class="block w-full border-gray-300 rounded-md shadow-sm focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-sm px-3 py-2" />
-                        </div>
-                        <div>
-                            <label class="text-sm font-medium text-gray-700 block mb-1">Guests</label>
-                            <select class="block w-full border-gray-300 rounded-md shadow-sm focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-sm px-3 py-2">
-                                <option>1 Adult</option>
-                                <option>2 Adults</option>
-                                <option>2 Adults, 1 Child</option>
-                            </select>
-                        </div>
-                        <div class="flex items-end">
-                            <button class="w-full bg-orange-500 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-600 transition shadow-md">Check Availability</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+          
         </section>
 
         <!-- Featured Rooms -->
