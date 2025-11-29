@@ -67,7 +67,7 @@ class Home extends Component
 
         $this->bookingReference = 'BK' . str_pad($booking->id, 6, '0', STR_PAD_LEFT);
         $this->closeBookingModal();
-        Mail::to('samcool3203@gmail.com')->send(new BookingReceived($booking));
+        Mail::to('techonika.com@gmail.com')->send(new BookingReceived($booking));
         $this->showConfirmationModal = true;
     }
 
