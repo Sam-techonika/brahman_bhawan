@@ -11,7 +11,7 @@
                     Experience comfort and hospitality at Brahman Bhawan. Your home away from home in the heart of the city.
                 </p>
             </div>
-
+    
             <!-- Quick Links -->
             <div>
                 <h3 class="text-lg font-bold mb-4 text-orange-400">Quick Links</h3>

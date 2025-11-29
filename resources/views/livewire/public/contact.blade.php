@@ -167,15 +167,13 @@
                         <div class="mt-8">
                             <h3 class="text-xl font-bold text-gray-900 mb-4">Find Us on Map</h3>
                             <div class="bg-gray-200 rounded-2xl overflow-hidden h-80 shadow-lg">
-                                <iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.5936537753447!2d77.18949731508236!3d28.649833482417665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d029c0f10e4a5%3A0x7a1c5f0a5b8e5f0a!2sKarol%20Bagh%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1699000000000!5m2!1sen!2sin" 
-                                    width="100%" 
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d224346.32835516133!2d77.20898509999999!3d28.5273522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x390cfd001bb5e313%3A0xc0d304ea7f9a5fd4!2sGround%20Floor%2C%20938%2C%20Street%20No-3%2C%20Elahi%20Bux%20Rd%2C%20Naiwala%2C%20Karol%20Bagh%2C%20New%20Delhi%2C%20Delhi%20110005!3m2!1d28.648859599999998!2d77.19829639999999!5e0!3m2!1sen!2sin!4v1764405630992!5m2!1sen!2sin"                               width="100%" 
                                     height="100%" 
                                     style="border:0;" 
                                     allowfullscreen="" 
                                     loading="lazy" 
-                                    referrerpolicy="no-referrer-when-downgrade">
-                                </iframe>
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        
                             </div>
                         </div>
                     </div>
