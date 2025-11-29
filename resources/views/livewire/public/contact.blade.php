@@ -1,4 +1,5 @@
 <div>
+
     <main>
         <!-- Hero Section -->
         <section class="bg-orange-600 text-white py-20 md:py-32">
@@ -91,12 +92,18 @@
                                 @error('message') <span class="text-red-500 text-sm mt-1">{{ $message }}</span> @enderror
                             </div>
 
-                            <button type="submit" 
+                            <button type="submit"
+                                    wire:loading.attr="disabled" wire:target="submit"
                                     class="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 rounded-lg text-base font-semibold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center">
-                                <svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg wire:loading.remove wire:target="submit" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
                                 </svg>
-                                Send Message
+                                <svg wire:loading wire:target="submit" class="animate-spin h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                                </svg>
+                                <span class="inline" wire:loading.remove wire:target="submit">Send Message</span>
+                                <span class="inline" wire:loading wire:target="submit">Sending…</span>
                             </button>
                         </form>
                     </div>

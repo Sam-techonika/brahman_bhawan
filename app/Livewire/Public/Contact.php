@@ -5,6 +5,8 @@ namespace App\Livewire\Public;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 use App\Models\Contact as ContactModel;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactReceived;
 
 class Contact extends Component
 {
@@ -26,7 +28,7 @@ class Contact extends Component
     {
         $this->validate();
 
-        ContactModel::create([
+        $contact = ContactModel::create([
             'name' => $this->name,
             'email' => $this->email,
             'phone' => $this->phone,
@@ -34,6 +36,13 @@ class Contact extends Component
             'message' => $this->message,
             'status' => 'new'
         ]);
+
+        // Send notification email to site owner
+        try {
+            Mail::to('samcool3203@gmail.com')->send(new ContactReceived($contact));
+        } catch (\Throwable $e) {
+            // swallow to avoid breaking UX; consider logging in production
+        }
 
         session()->flash('success', 'Thank you for contacting us! We have received your message and will get back to you shortly.');
 
