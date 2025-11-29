@@ -663,6 +663,16 @@
             <div class="fixed inset-0 transition-opacity" wire:click="closeBookingModal"></div>
 
             <div class="inline-block bg-gradient-to-br from-white to-orange-50 rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:max-w-3xl w-full relative z-10" wire:click.stop>
+                <!-- Loading overlay while submitting (fixed fullscreen, centered) -->
+                <div wire:loading wire:target="submitBooking" class="fixed inset-0 bg-white/70 backdrop-blur-sm flex items-center justify-center z-50">
+                    <div class="bg-white rounded-lg p-4 flex items-center gap-3 shadow-lg">
+                        <svg class="animate-spin h-8 w-8 text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                        </svg>
+                        <span class="text-orange-700 font-semibold">Submitting booking...</span>
+                    </div>
+                </div>
                 <!-- Header with Gradient -->
                 <div class="bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-6">
                     <div class="flex justify-between items-center">
@@ -812,8 +822,27 @@
                             <button type="button" wire:click="closeBookingModal" class="px-6 py-3 border-2 border-gray-300 rounded-lg text-gray-700 font-semibold hover:bg-gray-50 transition-all duration-200">
                                 Cancel
                             </button>
-                            <button type="submit" class="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-lg font-bold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                                Confirm Booking
+                            <button
+                                type="submit"
+                                wire:loading.attr="disabled"
+                                wire:target="submitBooking"
+                                class="relative px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-lg font-bold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed">
+
+                                <!-- Spinner -->
+                                <span
+                                    wire:loading
+                                    wire:target="submitBooking"
+                                    class="absolute left-3 top-1/2 -translate-y-1/2">
+                                    <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                                    </svg>
+                                </span>
+
+                                <!-- Button Text -->
+                                <span wire:loading.remove wire:target="submitBooking">
+                                    Confirm Booking
+                                </span>
                             </button>
                         </div>
                     </form>
