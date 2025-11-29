@@ -39,9 +39,8 @@ class Contact extends Component
 
         // Send notification email to site owner
         try {
-            Mail::to('samcool3203@gmail.com')->send(new ContactReceived($contact));
+            Mail::to('techonika.com@gmail.com')->send(new ContactReceived($contact));
         } catch (\Throwable $e) {
-            // swallow to avoid breaking UX; consider logging in production
         }
 
         session()->flash('success', 'Thank you for contacting us! We have received your message and will get back to you shortly.');
