@@ -123,7 +123,7 @@
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-semibold text-gray-900 mb-1">Address</h3>
-                                    <p class="text-base text-gray-700">Brahman Bhawan<br>8502, Arakashan Rd, Ram Nagar<br>Karol Bagh, New Delhi<br>Delhi 110005, India</p>
+                                    <p class="text-base text-gray-700">Brahman Bhawan<br>938/3, elahi bux road naiwala karolbagh New Delhi India</p>
                                     <a href="https://maps.google.com/?q=Brahman+Bhawan+Karol+Bagh+Delhi" target="_blank" class="text-orange-600 hover:text-orange-700 font-semibold mt-2 inline-block">Get Directions</a>
                                 </div>
                             </div>

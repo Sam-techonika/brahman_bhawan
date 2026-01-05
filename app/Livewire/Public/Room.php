@@ -67,7 +67,7 @@ class Room extends Component
 
         $this->bookingReference = 'BK' . str_pad($booking->id, 6, '0', STR_PAD_LEFT);
         $this->closeBookingModal();
-        Mail::to('techonika.com@gmail.com')->send(new BookingReceived($booking));
+        Mail::to('techonika.com@gmail.com')->cc('adminansh@gmail.com')->send(new BookingReceived($booking));
         $this->showConfirmationModal = true;
     }
 
