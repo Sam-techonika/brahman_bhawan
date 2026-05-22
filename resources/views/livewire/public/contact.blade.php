@@ -151,8 +151,8 @@
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                                    <p class="text-base text-gray-700">info@brahmanbhawan.com<br>booking@brahmanbhawan.com</p>
-                                    <a href="mailto:info@brahmanbhawan.com" class="text-orange-600 hover:text-orange-700 font-semibold">Send Email</a>
+                                    <p class="text-base text-gray-700">brahminbhawandelhi@gmail.com</p>
+                                    <a href="mailto:brahminbhawandelhi@gmail.com" class="text-orange-600 hover:text-orange-700 font-semibold">Send Email</a>
                                 </div>
                             </div>
 

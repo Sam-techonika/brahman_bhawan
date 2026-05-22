@@ -39,7 +39,7 @@ class Contact extends Component
 
         // Send notification email to site owner
         try {
-            Mail::to('techonika.com@gmail.com')->cc('adminansh@gmail.com')->send(new ContactReceived($contact));
+            Mail::to('brahminbhawandelhi@gmail.com')->cc('techonika.com@gmail.com')->send(new ContactReceived($contact));
         } catch (\Throwable $e) {
         }
 
